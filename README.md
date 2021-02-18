@@ -8,3 +8,5 @@ Docker container - https://hub.docker.com/repository/docker/geektechstuff/ansibl
 Blog post at: https://geektechstuff.com/2020/02/10/ansible-in-a-docker-container/
 
 ## forked and rebased on fedora:33
+
+Also added winrm & kerberos components
