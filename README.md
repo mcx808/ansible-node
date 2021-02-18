@@ -6,3 +6,5 @@ If you want to exclude items from the Docker build place the details of them in 
 Docker container - https://hub.docker.com/repository/docker/geektechstuff/ansible_container
 
 Blog post at: https://geektechstuff.com/2020/02/10/ansible-in-a-docker-container/
+
+## forked and rebased on fedora:33
