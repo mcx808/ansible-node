@@ -11,7 +11,7 @@ dnf -y install \
    krb5-devel \
    krb5-libs \
    krb5-workstation \
-   openssh-client \
+   openssh-clients \
    dnsutils && \
    pip install --upgrade pip && \
    pip install pywinrm[kerberos]
