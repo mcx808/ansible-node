@@ -12,6 +12,7 @@ dnf -y install \
    krb5-libs \
    krb5-workstation \
    openssh-clients \
+   nano \
    dnsutils && \
    pip install --upgrade pip && \
    pip install pywinrm[kerberos]
@@ -25,7 +26,9 @@ RUN mkdir -p /root/.ssh/ &&\
 RUN ansible-galaxy collection install ansible.windows
 
 # Makes a directory for ansible playbooks
-RUN mkdir -p /ansible/playbooks
+RUN \ 
+    mkdir -p /ansible/playbooks \
+    mkdir -p /ansible/inventory
 # Makes the playbooks directory the working directory
 WORKDIR /ansible/playbooks 
 
@@ -35,6 +38,7 @@ ENV ANSIBLE_HOST_KEY_CHECKING False
 ENV ANSIBLE_RETRY_FILES_ENABLED False
 ENV ANSIBLE_ROLES_PATH /ansible/playbooks/roles
 ENV ANSIBLE_SSH_PIPELINING True
+ENV EDITOR nano
 
 # Sets entrypoint as bin bash for now so kinit can be used to get kerberos tickets
 ENTRYPOINT ["/bin/bash"]
