@@ -28,7 +28,7 @@ RUN ansible-galaxy collection install ansible.windows
 # Makes a directory for ansible playbooks
 RUN \ 
     mkdir -p /ansible/playbooks \
-    mkdir -p /ansible/inventory
+    mkdir -p /ansible/playbooks/inventory
 # Makes the playbooks directory the working directory
 WORKDIR /ansible/playbooks 
 
